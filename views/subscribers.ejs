@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="list-container col-sm-6">
+        <% subscribers.forEach( sub => { %>
+            <div class="subscriber"></div>
+                <p>
+                    <span class="item-label"><%= sub.name %</span>
+                </p>
+                <p>
+                    <span class="item-label"><%= sub.email %></span>
+                </p>
+            </div>
+        <% }); %>
+    </div>
+</div>
