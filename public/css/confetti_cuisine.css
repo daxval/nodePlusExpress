@@ -59,3 +59,29 @@ a {
   background-color: #ffb99f;
   color: #ed4a0f;
 }
+
+.subscriber {  
+  padding: 10px 0px;  
+  border-bottom: 1px solid lightgray;
+}
+
+.subscriber p {  
+  margin: 0;
+}
+
+.list-container {  
+  padding: 0 20px;  
+  border: 3px solid #ffb568;  
+  border-radius: 1px;
+}
+
+.item-label {  
+  font-weight: 600;  
+  font-style: italic;  
+  margin-right: 5px;
+}
+
+.subscription-form input {  
+  display: block;  
+  margin: 5px;
+}
