@@ -1,0 +1,15 @@
+<div calss="form-data">
+    <form action="/course/${course._id}/update?_method=PUT" method="POST">
+        <label for="txtTitle">Title: </label>
+        <input type="text" name="title" id="txtTitle" autofocus required value="<%= course.title %>">
+        <label for="txtDescription">Description: </label>
+        <input type="text" name="description" id="txtDescription" required value="<%= course.description %>">
+        <label for="txtZipCode">zip Code: </label>
+        <input type="text" name="zipCode" id="txtZipCode" required value="<%= course.zipCode %>">
+        <label for="numCost">Cost: </label>
+        <input type="number" name="cost" id="numCost" required value="<%= course.cost %>">
+        <label for="numMaxStudents">Maximum Students: </label>
+        <input type="number" name="maximumStudents" id="numMaxStudents" required value="<%= course.maximumStudents %>">
+        <button type="submit">Save</button>
+    </form>
+</div>
