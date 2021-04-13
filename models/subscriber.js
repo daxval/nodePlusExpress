@@ -8,7 +8,7 @@ courses: [{
 }]
 
 
-const subscriberSchema = mongoose.Schema({ 
+const subscriberSchema = mongoose.Schema({
         name: {
             type: String,
             required: true
