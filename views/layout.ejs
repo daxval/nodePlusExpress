@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
     <title>Confetti Cuisine</title>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/confettiCuisine.js"></script>
+	<link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/confetti_cuisine.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -27,38 +28,39 @@
             <a href="/users">
                 <span class="button">Users</span>
             </a>
+            <%- include('courses/_coursesModal') %>
         </div>
         <div class="login">
-            <% if (loggedIn) { %>
+            <% if(loggedIn){ %>
                 <p>Logged in as <a href="<%= `/users/${currentUser._id}`%>">
-                    <%currentUser.fullName %>
-                </a>
-                <span class="log-out">
+                        <%= currentUser.fullname %>
+                    </a>
+                <p class="log-out">
                     <a href="/users/logout">Log out</a>
-                </span>
-            <% } else {%>
-            <a href="/users/login"> Log in</a>
-            <% } %>
+                </p>
+                </p>
+                <% } else{ %>
+                    <a href="/users/login">Log in</a>
+                    <% } %>
         </div>
-    </div>
-    
 
+    </div>
     <div class="flashes">
-        <%if(flashMessages){ %>
-            <%if(flashMessages.success){ %>
+        <% if(flashMessages){ %>
+            <% if(flashMessages.success){ %>
                 <div class="flash success">
-                    <%= flashMessages.succcess %>
+                    <%= flashMessages.success %>
                 </div>
-            <% } else if(flashMessages.error) { %>
-                <div class="flash error">
-                    <%= flashMessages.error %>
-                </div>
-            <% } %>
-        <% } %>
+                <% } else if(flashMessages.error){ %>
+                    <div class="flash error">
+                        <%= flashMessages.error %>
+                    </div>
+                    <% } %>
+                        <% } %>
     </div>
 
-    <div class="container">
-        <%- body %>
-    </div>
+    <%- body%>
+
+</body>
 
 </html>

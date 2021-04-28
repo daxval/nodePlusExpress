@@ -1,14 +1,8 @@
 "use strict";
 
-const mongoose = require("mongoose");
-
-courses: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Courses"
-}]
-
-
-const subscriberSchema = mongoose.Schema({
+const mongoose = require("mongoose"),
+    Course = require("../models/course"),
+    subscriberSchema = mongoose.Schema({
         name: {
             type: String,
             required: true

@@ -1,7 +1,9 @@
 <div calss="form-data">
     <form action="/users/${user._id}/update?_method=PUT" method="POST">
-        <label for="txtName">Name</label>
-        <input type="text" name="name" id="txtName" autofocus required value="<%= user.name %>">
+        <label for="txtFirstName">Name</label>
+        <input type="text" name="firstName" id="txtFirstName" autofocus required value="<%= user.firstName %>">
+        <label for="txtLastName">Name</label>
+        <input type="text" name="lastName" id="txtLastName" required value="<%= user.lastName %>">
         <label for="txtEmail">Email Address</label>
         <input type="email" name="email" id="txtEmail" required value="<%= user.email %>">
         <label for="txtZipCode">zip Code</label>

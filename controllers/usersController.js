@@ -1,7 +1,7 @@
 "use strict";
 
-const passport = require("passport");
-const User = require("../models/user"),
+const passport = require("passport"),
+    User = require("../models/user"),
     getUserParams = body => {
         return {
             name: {
@@ -38,11 +38,12 @@ module.exports={
     create: (req, res, next)=>{
         if(req.skip)
         { 
+            console.log("something wrong happened here...")
             return next();
         }
 
         let userParams = getUserParams(req.body);
-
+        console.log(userParams);
         let newUser = new User(userParams);
         User.register(newUser, req.body.password, (error, user)=>{
             if(user){
